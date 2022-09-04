@@ -14,8 +14,10 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: return 1
-      - run echo "hello world":
+      - run: exit 1
+      - run:
+          name: on error
+          command: "echo hello world"
           when: on_fail
 
 
