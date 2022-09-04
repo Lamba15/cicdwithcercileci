@@ -10,7 +10,7 @@ commands:
         type: string
         default: "lamba"
     steps:
-      - run: echo << parameters.name >>
+      - run: echo << parameters.numla >>
 
 
 # Define a job to be invoked later in a workflow.
