@@ -21,16 +21,16 @@ jobs:
           root: ~/
           paths:
             - output.txt
-    go-run-from-workspace:
-      docker:
-        - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-      steps:
-        - checkout
-        - attach_workspace:
+  go-run-from-workspace:
+    docker:
+      - image: cimg/base:stable
+      # Add steps to the job
+      # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    steps:
+      - checkout
+      - attach_workspace:
           at: ~/
-        - run: cat ~/output.txt
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows
